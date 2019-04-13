@@ -1,0 +1,26 @@
+{
+  "name": "data_structures_algorithms_js",
+  "version": "1.0.0",
+  "description": "data structures and algorithms in js",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "jest": "^24.7.1"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dkiziryan/data_structures_algorithms_js.git"
+  },
+  "author": "Dennis Kiziryan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dkiziryan/data_structures_algorithms_js/issues"
+  },
+  "homepage": "https://github.com/dkiziryan/data_structures_algorithms_js#readme"
+}
