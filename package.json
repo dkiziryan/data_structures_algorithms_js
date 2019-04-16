@@ -3,15 +3,17 @@
   "version": "1.0.0",
   "description": "data structures and algorithms in js",
   "main": "index.js",
-  "directories": {
-    "test": "tests"
+  "dependencies": {
+    "@babel/core": "^7.4.3",
+    "babel-jest": "^24.7.1"
   },
-  "dependencies": {},
   "devDependencies": {
+    "@babel/preset-env": "^7.4.3",
     "jest": "^24.7.1"
   },
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "clear_jest": "jest --clearCache"
   },
   "repository": {
     "type": "git",
