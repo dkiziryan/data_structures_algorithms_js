@@ -1,14 +1,17 @@
-function bubbleSort(a) {
+const bubbleSort = (array) => {
     let swapped;
+
     do {
         swapped = false;
-        for (let i = 0; i < a.length - 1; i++) {
-            if (a[i] > a[i + 1]) {
-                let temp = a[i];
-                a[i] = a[i + 1];
-                a[i + 1] = temp;
+        for (let i = 0; i < array.length - 1; i++) {
+            if (array[i] > array[i + 1]) {
+                let temp = array[i];
+                array[i] = array[i + 1];
+                array[i + 1] = temp;
                 swapped = true;
             }
         }
-    } while (swapped);
+    } while (swapped)
+
+    return array;
 }
