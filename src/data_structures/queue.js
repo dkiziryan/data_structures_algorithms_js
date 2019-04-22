@@ -6,11 +6,13 @@ class Queue {
         this.lowestCount = 0;
     }
 
+    // Adds an element to the queue
     enqueue(item) {
         this.items[this.count] = item;
         this.count++;
     }
 
+    // Removes an element from the queue
     dequeue() {
         if (this.count - this.lowestCount === 0) {
             return undefined;
@@ -21,6 +23,7 @@ class Queue {
         return item;
     }
 
+    // Returns the front element of the queue
     front() {
         return this.items[this.lowestCount]
     }
@@ -44,6 +47,8 @@ class Queue {
         return this.count - this.lowestCount;
     }
 }
+
+module.exports = Queue;
 
 let queue = new Queue;
 

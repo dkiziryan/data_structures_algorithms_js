@@ -14,6 +14,3 @@ const selectionSort = (array) => {
     });
     return array;
 }
-
-const items = [5, 1, 12, -5, 16, 2, 12, 14]
-console.log(selectionSort(items));
