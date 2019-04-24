@@ -50,6 +50,7 @@ class Queue {
 
 module.exports = Queue;
 
+/*
 let queue = new Queue;
 
 // returns Underflow 
@@ -85,3 +86,4 @@ console.log(queue.dequeue());
 // prints [30, 40, 50, 60] 
 console.log(queue.printQueue());
 console.log(queue.size());
+*/

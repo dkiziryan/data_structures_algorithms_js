@@ -2,34 +2,34 @@ class Stack {
 
     constructor() {
         this.items = {};
-        this.size = 0;
+        this.count = 0;
     }
 
     push(item) {
-        this.items[this.size] = item;
-        this.size++;
+        this.items[this.count] = item;
+        this.count++;
     }
 
     pop() {
-        if (this.size === 0) {
+        if (this.count === 0) {
             return undefined;
         }
-        this.size--;
-        const item = this.items[this.size];
-        delete this.items[this.size];
+        this.count--;
+        const item = this.items[this.count];
+        delete this.items[this.count];
         return item;
     }
 
-    sizeOfStack() {
-        return this.size;
+    size() {
+        return this.count;
     }
 
     peek() {
-        return this.items[this.size - 1];
+        return this.items[this.count - 1];
     }
 
     isEmpty() {
-        return true ? !this.size : false;
+        return true ? !this.count : false;
     }
 
     printStack() {

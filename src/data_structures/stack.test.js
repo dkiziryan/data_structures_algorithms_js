@@ -16,7 +16,7 @@ describe("Stack tests", () => {
     });
 
     it("should have 3 elements", () => {
-        expect(stack.sizeOfStack()).toBe(3);
+        expect(stack.size()).toBe(3);
     });
 
     it("should should show the last element added", () => {
@@ -25,6 +25,6 @@ describe("Stack tests", () => {
 
     it("should return 30 and remove it from stack ", () => {
         expect(stack.pop()).toBe(30);
-        expect(stack.sizeOfStack()).toBe(2);
+        expect(stack.size()).toBe(2);
     });
 });
