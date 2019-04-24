@@ -12,22 +12,18 @@ class QueueWithStacks {
     }
 
     dequeue() {
-        if (this.s1.isEmpty()) {
-            console.error('cannot dequeue empty queue');
+        if (this.s2.sizeOfStack() === 0) {
+            if (this.s1.isEmpty()) {
+                console.error('cannot dequeue empty queue');
+            }
+            while (this.s1.sizeOfStack() > 0) {
+                this.s2.push(this.s1.pop());
+            }
         }
-
-        for (let item in this.s1.items) {
-            this.s2.push(this.s1.pop());
-        }
-
         return this.s2.pop();
     }
 
     empty() {
         return this.s1.isEmpty() && this.s2.isEmpty();
-    }
-
-    print() {
-
     }
 }
