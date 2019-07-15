@@ -1,39 +1,28 @@
-const Stack = require('./stack');
+const Stack = require("./stack");
 
 class QueueWithStacks {
+  constructor() {
+    this.s1 = new Stack();
+    this.s2 = new Stack();
+  }
 
-    constructor() {
-        this.s1 = new Stack();
-        this.s2 = new Stack();
-    }
+  enqueue(item) {
+    this.s1.push(item);
+  }
 
-    enqueue(item) {
-        this.s1.push(item);
+  dequeue() {
+    if (this.s2.size() === 0) {
+      if (this.s1.isEmpty()) {
+        console.error("cannot dequeue empty queue");
+      }
+      while (this.s1.size() > 0) {
+        this.s2.push(this.s1.pop());
+      }
     }
+    return this.s2.pop();
+  }
 
-    dequeue() {
-        if (this.s2.size() === 0) {
-            if (this.s1.isEmpty()) {
-                console.error('cannot dequeue empty queue');
-            }
-            while (this.s1.size() > 0) {
-                this.s2.push(this.s1.pop());
-            }
-        }
-        return this.s2.pop();
-    }
-
-    empty() {
-        return this.s1.isEmpty() && this.s2.isEmpty();
-    }
+  empty() {
+    return this.s1.isEmpty() && this.s2.isEmpty();
+  }
 }
-
-let sq = new QueueWithStacks();
-
-sq.enqueue(1);
-sq.enqueue(2);
-sq.enqueue(3);
-
-console.log(sq.dequeue())
-console.log(sq.dequeue())
-console.log(sq.dequeue())
